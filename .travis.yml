@@ -4,6 +4,6 @@ node_js:
     - "6.1"
 
 before_script:
-  - npm install -g webpack karma karma-webpack karma-coverage karma-phantomjs2-launcher karma-sourcemap-loader
+  - npm install -g webpack karma karma-webpack karma-coverage karma-phantomjs2-launcher karma-sourcemap-loader karma-jasmine
 
 script: karma start
