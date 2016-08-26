@@ -3,4 +3,7 @@ node_js:
     - "node"
     - "6.1"
 
-script: npm run test
+before_script:
+  - npm install -g webpack karma karma-webpack karma-coverage karma-phantomjs2-launcher
+
+script: karma start
