@@ -44,8 +44,7 @@ module.exports = function makeWebpackConfig () {
             exclude: /node_modules/
         }, {
             test: /\.styl$/,
-            loader: ExtractTextPlugin.extract("style-loader", "css-loader!stylus-loader")
-
+            loader: ExtractTextPlugin.extract("style-loader", "stylus-loader")
         }, {
             test: /\.(png|jpg|jpeg|gif|svg|woff|woff2|ttf|eot)$/,
             loader: 'file'
@@ -55,12 +54,10 @@ module.exports = function makeWebpackConfig () {
         }, {
             test: /\.css$/,
             loader: isTest ? 'null' : ExtractTextPlugin.extract('style', 'css?sourceMap!postcss')
-        },
-        {
+        }, {
             test: /\.woff(2)?(\?v=[0-9]\.[0-9]\.[0-9])?$/,
             loader: "url-loader?limit=10000&minetype=application/font-woff"
-        },
-        {
+        }, {
             test: /\.(ttf|eot|svg)(\?v=[0-9]\.[0-9]\.[0-9])?$/,
             loader: "file-loader"
         }
