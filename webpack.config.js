@@ -44,7 +44,7 @@ module.exports = function makeWebpackConfig () {
             exclude: /node_modules/
         }, {
             test: /\.styl$/,
-            loader: ExtractTextPlugin.extract("style-loader", "stylus-loader")
+            loader: ExtractTextPlugin.extract("style-loader", "css-loader!stylus-loader")
         }, {
             test: /\.(png|jpg|jpeg|gif|svg|woff|woff2|ttf|eot)$/,
             loader: 'file'
